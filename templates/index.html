@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+<title>Weather</title>
+<meta name="description" content="Weather-app">
+<meta name="author" content="SitePoint">  
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--link rel="stylesheet" type=text/css href="{{ url_for('static', filename='css/styles.css') }}"-->
+
+</head>
+<body background="../static/image/cornfield.jpg">
+<!-- Search form -->
+<form method="POST" action="/" id="weather-search">
+<div class="active-cyan-3 active-cyan-4 mb-4">
+  <input class="form-control" type="text" placeholder="Search" name="search" aria-label="Search">
+</form>
+
+</div>
+
+
+<h2 id="city-name"></h2>
+
+<div class="card" style="width: 52rem;height: 20rem">
+
+  <div class="card-body">
+    <h1 class="Temperature">35&#8451</h1>
+    <h1 class="description">Clear</h1>
+    <h1 class="wind">wind</h1>
+<p class="font-weight-light" id="wind">32</p>
+
+    <h1 class="humidity">Humidity</h1>
+<p class="font-weight-light" id="humidity">20%</p>
+
+    <h1 class="tonight">Tonight</h1>
+<img src="../static/image/crescent.png" alt="crescent" id="image-tonight" style="width: 3rem;height:3rem">
+<p class="font-weight-light" id="tonight-temp">20&#8451</p>
+<div id="tomo">
+    <h1 class="tomorrow">Tomorrow</h1>
+    <p class="font-weight-light" id="tomorrow-temp">18&#8451</p>
+<img src="../static/image/cloud.png" alt="cloud" id="image-tomorrow" style="width: 3rem;height:3rem">
+
+</div>
+
+
+    <!--img src="../static/image/sunny.png" alt="sunny" id="today-image" style="width: 10rem;height:10rem"-->
+<!--p><i class="wi wi-owm-802" id="myDIV" ></i></p-->
+<p id="icon"></p>
+  <p class="card-text"></p>
+  </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='../static/js/weather-app.js') }}"></script>
+
+</body>
+</html>

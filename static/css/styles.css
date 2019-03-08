@@ -1,0 +1,144 @@
+body{
+  background-repeat: no-repeat;
+background-size: 1960px 1800px;
+background-position: center;
+}
+
+.active-cyan-3 input[type=text] {
+    position:absolute;
+    border: 1px solid #4dd0e1;
+    box-shadow: 0 0 0 1px #4dd0e1;
+    width:500px;
+    top:50px;
+    left:300px;
+}
+
+.card{
+    position:fixed;
+    left:48%;
+    top:50%;
+    /* margin-top: -50px;
+    margin-left: -170px; */
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+
+
+}
+
+.Temperature{
+    position:relative;
+    text-align:center;
+    font-size:70px;
+}
+
+.description{
+    position:absolute;
+    top:18px;
+    right:30px;
+}
+
+.wind{
+    position:absolute;
+    top:85px;
+    right:30px;
+}
+#wind{
+    position:absolute;
+    top:130px;
+    right:20px;
+    font-size:30px;
+}
+
+#humidity{
+    position:absolute;
+    top:230px;
+    right:45px;
+    font-size:30px;
+}
+
+.humidity{
+    position:absolute;
+    top:200px;
+    right:10px;
+    font-size:30px;  
+}
+
+.tonight{
+    position:absolute;
+    top:20px;
+}
+
+.tomorrow{
+    position:absolute;
+    top:130px;
+}
+
+i{
+    position:absolute;
+    left:50%;
+    top:67%;
+    /* margin-top: -50px;
+    margin-left: -170px; */
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+}
+
+p{
+    font-size:100px;
+}
+
+
+#image-tonight{
+    position:absolute;
+    left:20px;
+    top:80px;
+    
+}
+
+#city-name{
+    position: relative;
+    left:20%; 
+    top:130px;
+    /* color:#696969; */
+    width: 50%;
+    padding: 10px;
+    margin-left: -100px;     /* Shift over half the width */
+    margin-top:  -50px;  
+    
+}
+
+#image-tomorrow{
+    position:absolute;
+    left:20px;
+    top:180px;
+}
+
+#tonight-temp{
+    position: absolute;
+    left:90px;
+    font-size:30px;
+    top:80px;
+
+}
+
+#tomo{
+    position:absolute;
+    top:50px;
+}
+
+
+
+#tomorrow-temp{
+    position: absolute;
+    top:180px;
+    left:90px;
+    font-size:30px;
+
+}
+
+
+
+.date-night{
+    position: relative;
+    top:200px;
+}
