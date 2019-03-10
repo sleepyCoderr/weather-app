@@ -9,12 +9,9 @@ from flask import (
     request,
     redirect,
     url_for)
-from bson.json_util import dumps
 import googlemaps
 from datetime import datetime
 import datetime
-
-
 
 app=Flask(__name__, static_url_path = "/static", static_folder = "static")
 
@@ -122,4 +119,4 @@ def all_data():
  
         dm=dict_main.create_dict(v)
         dm.update({"location":place_result["results"][0]['formatted_address']})
-        return dumps(dm);
+        return json.dumps(dm);
