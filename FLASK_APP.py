@@ -1,5 +1,4 @@
 import credentials
-import oauth2 as oauth
 import urllib3
 import json
 import pytemperature
@@ -12,7 +11,6 @@ from flask import (
     url_for)
 from bson.json_util import dumps
 import googlemaps
-import pprint
 from datetime import datetime
 import datetime
 

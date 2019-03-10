@@ -1,1 +1,8 @@
 # weather-app
+This app uses:
+
+JAVASCRIPT
+HTML
+BOOTSTRAP
+FLASK
+PYTHON

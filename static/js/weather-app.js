@@ -65,11 +65,7 @@ $(function(){
 
                 
 
-                // var iconDom=document.querySelector('.wi');                
-                // document.getElementById("myDIV").className="wi-owm-"+icon.toString(); 
-                // var node=document.getElementById("#icon")
-                // i=document.createElement('i');
-                // var iconDOM=i.setAttribute("class","wi"+ "wi-owm-"+icon.toString());
+        
    
                 i=document.createElement('i');
                 iTwo=document.createElement('i');
@@ -85,27 +81,7 @@ $(function(){
                 $('#icon').unbind().empty().append(i);
                 $('#icon-2').unbind().empty().append(iTwo);
                 $('#icon-3').unbind().empty().append(iThree);
-                
-                // document.getElementById("icon").style.display="none";
-                // document.getElementById("icon-2").style.display="none";
-                // document.getElementById("icon-3").style.display="none";
-
-                // document.getElementById("tomorrow-temp").style.display="none";
-
-
-                // $( "#icon" ).fadeIn( "slow", function() {
-                // document.getElementById("icon").style.display="block";
-                //   });
-                // $( "#icon-2" ).fadeIn( "slow", function() {
-                // document.getElementById("icon-2").style.display="block";
-                // });
-                // $( "#icon-3" ).fadeIn( "slow", function() {
-                // document.getElementById("icon-3").style.display="block";
-                // });
-
-                // $( "#tomorrow-temp" ).fadeIn( "slow", function() {
-                // document.getElementById("tomorrow-temp").style.display="block";
-                // });
+       
 
                 $( "#tomo" ).fadeIn( "slow", function() {
                     document.getElementById("tomo").style.display="block";
