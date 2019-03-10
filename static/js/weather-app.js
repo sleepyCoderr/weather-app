@@ -1,11 +1,20 @@
 
+document.getElementById("tomo").style.display="none";
+document.getElementById("tonight").style.display="none";
+document.getElementById("w").style.display="none";
+document.getElementById("h").style.display="none";
+document.getElementById("T").style.display="none";
+document.getElementById("d").style.display="none";
+
 
 
 
 $(function(){
 
 
+
     $('form#weather-search').on('submit',function(){
+
         var that=$(this),
           url = that.attr('action'),
           type=that.attr('method'),
@@ -25,14 +34,25 @@ $(function(){
                 function precise(x) {
                     return Number.parseFloat(x).toPrecision(2);
                   }
-                  
-                  t=precise(response.temp);
+                  console.log(response);
+                  t=precise(response.current);
                   w=response.wind;
                   h=response.humidity;
                   d=response.description;
                   icon=response.id;
                   l=response.location;
-                  tn=response.min_temp;
+                  tn=response.tonight;
+                  tomo=response.tomorrow;
+                  nightIcon=response.tonight_id;
+                  tomoIcon=response.tomo_id;
+                  time=response.time;
+
+                  if (time =="night"){
+                      var ic="night";
+                  }
+
+                  else{
+                      var ic="day"};
                 // document.querySelector('.Temperature').textContent=t;
                 $('.Temperature').unbind().empty().append(t + '&#8457;');
                 $('#wind').unbind().empty().append(w+" mph");
@@ -40,7 +60,10 @@ $(function(){
                 $('.description').unbind().empty().append(d);
                 $('#city-name').unbind().empty().append(l);
                 $('#tonight-temp').unbind().empty().append(tn+'&#8457;');
+                $('#tomorrow-temp').unbind().empty().append(tomo+'&#8457;').slideDown();
+          
 
+                
 
                 // var iconDom=document.querySelector('.wi');                
                 // document.getElementById("myDIV").className="wi-owm-"+icon.toString(); 
@@ -49,13 +72,66 @@ $(function(){
                 // var iconDOM=i.setAttribute("class","wi"+ "wi-owm-"+icon.toString());
    
                 i=document.createElement('i');
-                i.setAttribute("class","wi"+" wi-owm-day-"+icon.toString());
-                // document.getElementById("icon").appendChild(i); 
+                iTwo=document.createElement('i');
+                iThree=document.createElement('i');
+
+
+
+                i.setAttribute("class","wi"+" wi-owm-"+ic+"-"+icon.toString()+" i");
+                
+                iTwo.setAttribute("class","wi"+" wi-owm-night-"+nightIcon.toString()+" i2");
+                iThree.setAttribute("class","wi"+" wi-owm-day-"+tomoIcon.toString()+" i3");
+
                 $('#icon').unbind().empty().append(i);
-                              }
+                $('#icon-2').unbind().empty().append(iTwo);
+                $('#icon-3').unbind().empty().append(iThree);
+                
+                // document.getElementById("icon").style.display="none";
+                // document.getElementById("icon-2").style.display="none";
+                // document.getElementById("icon-3").style.display="none";
+
+                // document.getElementById("tomorrow-temp").style.display="none";
+
+
+                // $( "#icon" ).fadeIn( "slow", function() {
+                // document.getElementById("icon").style.display="block";
+                //   });
+                // $( "#icon-2" ).fadeIn( "slow", function() {
+                // document.getElementById("icon-2").style.display="block";
+                // });
+                // $( "#icon-3" ).fadeIn( "slow", function() {
+                // document.getElementById("icon-3").style.display="block";
+                // });
+
+                // $( "#tomorrow-temp" ).fadeIn( "slow", function() {
+                // document.getElementById("tomorrow-temp").style.display="block";
+                // });
+
+                $( "#tomo" ).fadeIn( "slow", function() {
+                    document.getElementById("tomo").style.display="block";
+                    });
+
+                $('#tonight').fadeIn( "slow", function() {
+                    document.getElementById("tonight").style.display="block";
+                    });
+                $('#w').fadeIn( "slow", function() {
+                    document.getElementById("w").style.display="block";
+                    });
+                $('#h').fadeIn( "slow", function() {
+                    document.getElementById("h").style.display="block";
+                    });
+                
+                $('#T').fadeIn( "slow", function() {
+                    document.getElementById("T").style.display="block";
+                    });
+                    
+                $('#d').fadeIn( "slow", function() {
+                    document.getElementById("d").style.display="block";
+                    });
+                 }
 
             });  
             return false;
-                }).slideDown();                  
+                });                  
                 
 })
